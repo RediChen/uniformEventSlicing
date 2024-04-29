@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
 :root {
-    --color-primary-bg: #18b8c8;
-    --color-primary-text: #151e1e;
+    --color-primary-light-bg: #18b8c8;
+    --color-primary-dark-bg: #208597;
+    --color-primary-dark-text: #151e1e;
+    --color-emphasis-light-text: #03525F;
+    --white: #fff;
+    --black: #000;
 }
 body {
     background-image: url("./assets/images/bg.jpg");
@@ -27,7 +31,7 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-primary-bg);
+    background-color: var(--color-primary-light-bg);
     border-bottom: 10px solid transparent;
     border-image: url("./assets/images/header-border-clipped.png") 11 11;
 
@@ -45,7 +49,7 @@ a:active {
             padding: 0.5rem 1rem;
             border-radius: 99rem;
             text-align: center;
-            color: var(--color-primary-text);
+            color: var(--color-primary-dark-text);
             font-weight: 500;
 
             &.active {
@@ -59,4 +63,44 @@ a:active {
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.6;
+}
+/*/=======================/*/
+
+.info-board {
+    margin: 4rem auto;
+    background-color: var(--white);
+    border-radius: 2rem;
+    max-width: 960px;
+    padding: 2.5rem;
+    border: 2px solid var(--color-primary-light-bg);
+    position: relative;
+
+    li {
+        margin-block: 1rem;
+    }
+    span {
+        color: var(--color-emphasis-light-text);
+    }
+}
+.info-title {
+    background-color: var(--color-primary-dark-bg);
+    color: var(--white);
+    width: 6rem;
+    height: 6rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    @media screen and (min-width: 768px) {
+        top: -3rem;
+        left: -3rem;
+    }
+}
+.agenda-img {
+    bottom: 0;
+    left: -5%;
 }
