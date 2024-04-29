@@ -25,6 +25,12 @@ a:active {
     object-fit: cover;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*/======= 模組區 END ======/ */
 
 .top-header {
@@ -90,9 +96,6 @@ a:active {
     font-size: 1.5rem;
     text-align: center;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
 
     @media screen and (min-width: 768px) {
@@ -103,4 +106,24 @@ a:active {
 .agenda-img {
     bottom: 0;
     left: -5%;
+}
+
+.brands-wrap > h2 {
+
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: #555;
+    color: #ddd;
+}
+.setn-logo {
+    filter: saturate(0) contrast(2);
+    opacity: 0.6;
+}
+.copyright {
+    margin: 0;
+    line-height: 3;
+    color: var(--white);
+    text-align: center;
 }
