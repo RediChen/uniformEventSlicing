@@ -66,10 +66,20 @@ a:active {
     }
 }
 
-.top-section>p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.6;
+.top-section-box {
+    position: relative;
+
+    > img:first-child {
+        position: absolute;
+        top: 0;
+        left: 20%;
+    }
+
+    > p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.6;
+    }
 }
 /*/=======================/*/
 
