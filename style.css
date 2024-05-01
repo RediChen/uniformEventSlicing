@@ -105,7 +105,7 @@ a:active {
         font-size: 1.2rem;
         text-align: center;
         transition: background 0.3s;
-        
+
         &:hover {
             background-color: rgba(0, 0, 0, 0.3);
         }
@@ -131,7 +131,7 @@ a:active {
 .top-section-box {
     position: relative;
 
-    /* hat */
+    /* hat for PC */
     > img:first-child {
         position: absolute;
         top: 1.5rem;
@@ -195,15 +195,53 @@ a:active {
 
 /*/======= Footer ======/ */
 
-.brands-wrap > h2 {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    background-color: #555;
-    color: #ddd;
+.brands-wrap {
+    &,
+    > * {
+        margin: 0;
+        padding: 0;
+    }
+    flex-direction: column;
+
+    .brands-box {
+        h2 {
+            background-color: #555;
+            color: #ddd;
+            font-weight: 400;
+            line-height: 2;
+        }
+        div {
+            text-align: center;
+        }
+        img {
+            height: 100%;
+            max-height: 64px;
+            object-fit: contain;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        /* justify-content: space-evenly; */
+        border-bottom: 1px solid var(--bs-secondary);
+
+        .brands-box {
+            align-items: center;
+            h2 {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                line-height: initial;
+            }
+            /* img {
+                max-height: 64px;
+            } */
+        }
+    }
 }
+
 .setn-logo {
+    height: 35px;
     filter: saturate(0) contrast(2);
     opacity: 0.6;
 }
