@@ -9,6 +9,7 @@
     --white: #fff;
     --black: #000;
     --fixed-btn-size: 40px;
+    --fixed-btn-bg-color: rgba(0, 0, 0, 0.6);
 }
 body {
     background-image: url("./assets/images/bg.jpg");
@@ -86,34 +87,62 @@ a:active {
     }
 }
 
-.nav-hbg {
-    --offset: 10px;
+.fixed-btn {
     width: var(--fixed-btn-size);
     height: var(--fixed-btn-size);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--gold);
+    background-color: var(--fixed-btn-bg-color);
     border-radius: 50%;
+}
+
+.fixed-btn-box {
+    position: absolute;
+    top: 30%;
+    right: 1rem;
+
+    > .fixed-btn {
+        margin-top: 8px;
+        color: #fff;
+        font-size: 1.2rem;
+        text-align: center;
+        transition: background 0.3s;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+.nav-hbg {
+    --offset: 10px;
+
+    color: var(--gold);
     font-size: 1.5rem;
     position: absolute;
     top: var(--offset);
     left: calc(100% - var(--fixed-btn-size) - var(--offset));
 }
 /*/=======================/*/
+.top-section > picture {
+    display: block;
+    margin: 0 auto;
+    max-width: 960px;
+}
 
 .top-section-box {
     position: relative;
 
+    /* hat */
     > img:first-child {
         position: absolute;
-        top: 0;
-        left: 20%;
+        top: 1.5rem;
+        left: 23%;
     }
 
     > p {
         font-size: 0.9rem;
         font-weight: 700;
         line-height: 2;
-        
+
         @media screen and (min-width: 768px) {
             font-size: 1.2rem;
             font-weight: 500;
@@ -128,7 +157,6 @@ a:active {
     background-color: var(--white);
     border-radius: 2rem;
     max-width: 960px;
-    /* padding: 2.5rem; */
     border: 2px solid var(--color-primary-light-bg);
     position: relative;
 
