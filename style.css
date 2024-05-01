@@ -4,7 +4,7 @@
     --color-primary-light-bg: #18b8c8;
     --color-primary-dark-bg: #208597;
     --color-primary-dark-text: #151e1e;
-    --color-emphasis-light-text: #03525F;
+    --color-emphasis-light-text: #03525f;
     --white: #fff;
     --black: #000;
 }
@@ -40,11 +40,25 @@ a:active {
     align-items: center;
     background-color: var(--color-primary-light-bg);
     border-bottom: 10px solid transparent;
-    border-image: url("./assets/images/header-border-clipped.png") 11 11;
+    border-image: url("./assets/images/header-border-clipped.png") 11 11 repeat;
 
     .co-branding {
         align-self: start;
-        margin-bottom: -1rem;
+
+        margin-bottom: 1rem;
+        width: 200px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: -1rem;
+            width: 300px;
+        }
+    }
+    .top-title {
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 550px;
+        }
     }
 
     nav {
@@ -76,9 +90,15 @@ a:active {
     }
 
     > p {
-        font-size: 1.2rem;
-        font-weight: 500;
-        line-height: 1.6;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 2;
+        
+        @media screen and (min-width: 768px) {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
     }
 }
 /*/=======================/*/
@@ -128,7 +148,6 @@ a:active {
 /*/======= Footer ======/ */
 
 .brands-wrap > h2 {
-
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
