@@ -134,10 +134,12 @@ a:active {
     position: relative;
 
     /* hat for PC */
-    > img:first-child {
+    .top-hat {
+        width: 80px;
+        height: 55px;
         position: absolute;
         top: 1.5rem;
-        left: 23%;
+        right: calc(50% + 300px);
     }
 
     > p {
@@ -151,6 +153,14 @@ a:active {
             line-height: 1.6;
         }
     }
+}
+.img-girl {
+    width: 170px;
+    bottom: -270px;
+    /* right: 200px; */
+    left: calc(50% + 280px);
+
+    z-index: 9;
 }
 /*/=======================/*/
 
