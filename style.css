@@ -224,8 +224,24 @@ a:active {
     }
 }
 .agenda-img {
+    width: 144px;
+    position: absolute;
     bottom: 0;
     left: -5%;
+
+    &::after {
+        --offset: 15px;
+        content: '';
+        display: block;
+        position: relative;
+        height: 60px;
+        border-radius: 50%;
+        bottom: 40px;
+        left: var(--offset);
+        right: var(--offset);
+        /* background-image: radial-gradient(black, lightgreen 10%, transparent 50%); */
+        background-image: radial-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, transparent 40%), radial-gradient(rgba(0, 0, 0, 0.3), transparent 60%);
+    }
 }
 
 .notice li {
