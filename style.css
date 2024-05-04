@@ -94,7 +94,6 @@ a:active {
 
                 &:hover {
                 background-color: hsl(48, 100%, 79%);
-#ffcd00
                 }
             }
         }
@@ -109,8 +108,8 @@ a:active {
 }
 
 .fixed-btn-box {
-    position: absolute;
-    top: 30%;
+    position: fixed;
+    top: 7%;
     right: 1rem;
 
     > .fixed-btn {
