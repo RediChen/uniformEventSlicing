@@ -299,7 +299,7 @@ a:active {
 }
 
 .setn-logo > img {
-    width: 100%;
+    width: 100px;
     filter: saturate(0) contrast(2);
     opacity: 0.6;
 }
